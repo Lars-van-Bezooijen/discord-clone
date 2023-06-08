@@ -54,7 +54,7 @@
                 @if($errors->any())
                     <label for="email" class="text-discord-error font-bold text-xs mb-2">EMAIL - <span class="italic font-semibold">Login or password is invalid</span></label>
                 @else
-                    <label for="email" class="text-discord-graytext font-bold text-xs mb-2 after:content-['*'] after:text-red-500">EMAIL </label>
+                    <label for="email" class="text-discord-graytext font-bold text-xs mb-2 after:content-['*'] after:text-discord-error"">EMAIL </label>
                 @endif
                 <input type="email" name="email" id="email" class="bg-discord-backgrounddark border-none rounded-md p-2 focus:ring-0">
             </div>
@@ -62,7 +62,7 @@
                 @if($errors->any())
                     <label for="email" class="text-discord-error font-bold text-xs mb-2">PASSWORD - <span class="italic font-semibold">Login or password is invalid</span></label>
                 @else
-                    <label for="password" class="text-discord-graytext font-bold text-xs mb-2 after:content-['*'] after:text-red-500">PASSWORD </label>
+                    <label for="password" class="text-discord-graytext font-bold text-xs mb-2 after:content-['*'] after:text-discord-error">PASSWORD </label>
                 @endif
                 <input type="password" name="password" id="password" class="bg-discord-backgrounddark border-none rounded-md p-2 focus:ring-0">
             </div>
