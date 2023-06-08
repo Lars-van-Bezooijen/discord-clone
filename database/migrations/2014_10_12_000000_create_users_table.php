@@ -17,7 +17,8 @@ return new class extends Migration
             $table->string('display_name')->nullable();
             $table->foreignId('status_id')
                 ->references('id')
-                ->on('statuses');
+                ->on('statuses')
+                ->default(1);
             $table->string('profile_picture')->nullable();
             $table->string('banner')->nullable();
             $table->string('about_me')->nullable();
