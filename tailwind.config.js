@@ -16,6 +16,7 @@ export default {
             },
             colors: {
                 discord: {
+                    error: '#f06c6b',
                     blue: '#6064f4',
                     bluehover: '#4854c4',
                     whitetext: '#fff',

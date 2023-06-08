@@ -47,21 +47,31 @@
             <p class="text-discord-graytext">We're so excited to see you again!</p>
         </div>
         
-        <form action="" method="">
+        <form action="{{ route('login') }}" method="POST">
+            @csrf
+            
             <div class="flex flex-col mb-4">
-                <label for="email" class="text-discord-graytext font-bold text-xs mb-2 after:content-['*'] after:text-red-500">EMAIL </label>
+                @if($errors->any())
+                    <label for="email" class="text-discord-error font-bold text-xs mb-2">EMAIL - <span class="italic font-semibold">Login or password is invalid</span></label>
+                @else
+                    <label for="email" class="text-discord-graytext font-bold text-xs mb-2 after:content-['*'] after:text-red-500">EMAIL </label>
+                @endif
                 <input type="email" name="email" id="email" class="bg-discord-backgrounddark border-none rounded-md p-2 focus:ring-0">
             </div>
             <div class="flex flex-col">
-                <label for="password" class="text-discord-graytext font-bold text-xs mb-2 after:content-['*'] after:text-red-500">PASSWORD </label>
+                @if($errors->any())
+                    <label for="email" class="text-discord-error font-bold text-xs mb-2">PASSWORD - <span class="italic font-semibold">Login or password is invalid</span></label>
+                @else
+                    <label for="password" class="text-discord-graytext font-bold text-xs mb-2 after:content-['*'] after:text-red-500">PASSWORD </label>
+                @endif
                 <input type="password" name="password" id="password" class="bg-discord-backgrounddark border-none rounded-md p-2 focus:ring-0">
             </div>
-            <a href="" class="basic-link inline-block mb-4">Forgot your password?</a>
+            <a href="{{ route('password.request') }}" class="basic-link inline-block mb-4">Forgot your password?</a>
             <div>
                 <div class="bg-discord-blue hover:bg-discord-bluehover mb-2 rounded-md">
-                    <button type="submit" class="w-full text-white p-2 font-semibold rounded-sm focus:ring-discord-bluetext focus:ring-2 focus:outline-none">Log In</button>
+                    <button type="submit" class="w-full text-white p-2 font-semibold rounded-md focus:ring-discord-bluetext focus:ring-2 focus:outline-none">Log In</button>
                 </div>
-                <p class="text-sm text-discord-graytext">Need an account? <a href="" class="basic-link">Register</a></p>
+                <p class="text-sm text-discord-graytext">Need an account? <a href="{{ route('register') }}" class="basic-link">Register</a></p>
             </div>
         </form>
     </div>
