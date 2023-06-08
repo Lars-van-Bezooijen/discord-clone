@@ -1,6 +1,4 @@
-<x-guest-layout>
-    <!-- Session Status -->
-    <x-auth-session-status class="mb-4" :status="session('status')" />
+{{-- 
 
     <form method="POST" action="{{ route('login') }}">
         @csrf
@@ -24,14 +22,6 @@
             <x-input-error :messages="$errors->get('password')" class="mt-2" />
         </div>
 
-        <!-- Remember Me -->
-        <div class="block mt-4">
-            <label for="remember_me" class="inline-flex items-center">
-                <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" name="remember">
-                <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-            </label>
-        </div>
-
         <div class="flex items-center justify-end mt-4">
             @if (Route::has('password.request'))
                 <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
@@ -44,4 +34,37 @@
             </x-primary-button>
         </div>
     </form>
-</x-guest-layout>
+ --}}
+
+@extends('layouts.base')
+@section('content')
+
+<div class="select-none w-full h-full sm:bg-[url({{ asset('images/discord_background.jpg') }})] bg-no-repeat bg-center bg-cover flex justify-center items-center">
+    <div class="bg-discord-backgroundlight pt-6 px-6 sm:p-6 sm:m-6 h-full sm:h-auto sm:rounded-md w-full md:max-w-[500px]">
+        <div class="text-center mb-4">
+            <img src="{{ asset('images/discord_logo_with_text.png') }}" alt="logo" class="w-32 mb-6 m-auto sm:hidden">
+            <p class="text-xl font-bold">Welcome back!</p>
+            <p class="text-discord-graytext">We're so excited to see you again!</p>
+        </div>
+        
+        <form action="" method="">
+            <div class="flex flex-col mb-4">
+                <label for="email" class="text-discord-graytext font-bold text-xs mb-2 after:content-['*'] after:text-red-500">EMAIL </label>
+                <input type="email" name="email" id="email" class="bg-discord-backgrounddark border-none rounded-md p-2 focus:ring-0">
+            </div>
+            <div class="flex flex-col">
+                <label for="password" class="text-discord-graytext font-bold text-xs mb-2 after:content-['*'] after:text-red-500">PASSWORD </label>
+                <input type="password" name="password" id="password" class="bg-discord-backgrounddark border-none rounded-md p-2 focus:ring-0">
+            </div>
+            <a href="" class="basic-link inline-block mb-4">Forgot your password?</a>
+            <div>
+                <div class="bg-discord-blue hover:bg-discord-bluehover mb-2 rounded-md">
+                    <button type="submit" class="w-full text-white p-2 font-semibold rounded-sm focus:ring-discord-bluetext focus:ring-2 focus:outline-none">Log In</button>
+                </div>
+                <p class="text-sm text-discord-graytext">Need an account? <a href="" class="basic-link">Register</a></p>
+            </div>
+        </form>
+    </div>
+</div>
+
+@endsection

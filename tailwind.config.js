@@ -14,7 +14,24 @@ export default {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
+            colors: {
+                discord: {
+                    blue: '#6064f4',
+                    bluehover: '#4854c4',
+                    whitetext: '#fff',
+                    graytext: '#9dacb3',
+                    bluetext: '#0b9be3',
+                    backgrounddark: '#1e1f22',
+                    backgroundmedium: '#2b2d31',
+                    backgroundlight: '#313338',
+                    hover: '#3d3e44',
+                    icon: '#dadde0',
+
+
+                },
+            },
         },
+        
     },
 
     plugins: [forms],
