@@ -18,7 +18,7 @@
             {{-- Email --}}
             <div class="flex flex-col mb-4">
                 @if($errors->any())
-                    <label for="email" class="text-discord-error font-bold text-xs mb-2">EMAIL - <span class="italic font-semibold">Login or password is invalid</span></label>
+                    <label for="email" class="text-discord-error font-bold text-xs mb-2">EMAIL - <span class="italic font-semibold">{{ $errors->first('email') }}</span></label>
                 @else
                     <label for="email" class="text-discord-graytext font-bold text-xs mb-2 after:content-['*'] after:text-discord-error"">EMAIL </label>
                 @endif
@@ -27,7 +27,7 @@
             {{-- Password --}}
             <div class="flex flex-col">
                 @if($errors->any())
-                    <label for="email" class="text-discord-error font-bold text-xs mb-2">PASSWORD - <span class="italic font-semibold">Login or password is invalid</span></label>
+                    <label for="email" class="text-discord-error font-bold text-xs mb-2">PASSWORD - <span class="italic font-semibold">{{ $errors->first('email') }}</span></label>
                 @else
                     <label for="password" class="text-discord-graytext font-bold text-xs mb-2 after:content-['*'] after:text-discord-error">PASSWORD </label>
                 @endif
