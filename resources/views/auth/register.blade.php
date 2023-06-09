@@ -64,13 +64,13 @@
         </div>
         
         {{-- Content --}}
-        <form action="{{ route('login') }}" method="POST">
+        <form action="{{ route('register') }}" method="POST">
             @csrf
             
             {{-- Email --}}
             <div class="flex flex-col mb-4">
-                @if($errors->any())
-                    <label for="email" class="text-discord-error font-bold text-xs mb-2">EMAIL - <span class="italic font-semibold">Login or password is invalid</span></label>
+                @if($errors->has('email'))
+                    <label for="email" class="text-discord-error font-bold text-xs mb-2">EMAIL - <span class="italic font-semibold">Email is invalid</span></label>
                 @else
                     <label for="email" class="text-discord-graytext font-bold text-xs mb-2">EMAIL </label>
                 @endif
@@ -78,8 +78,8 @@
             </div>
             {{-- Username --}}
             <div class="flex flex-col mb-4">
-                @if($errors->any())
-                    <label for="username" class="text-discord-error font-bold text-xs mb-2">USERNAME - <span class="italic font-semibold">Username is already taken</span></label>
+                @if($errors->has('username'))
+                    <label for="username" class="text-discord-error font-bold text-xs mb-2">USERNAME - <span class="italic font-semibold">Username is not valid or already taken</span></label>
                 @else
                     <label for="email" class="text-discord-graytext font-bold text-xs mb-2">USERNAME </label>
                 @endif
@@ -87,8 +87,8 @@
             </div>
             {{-- Password --}}
             <div class="flex flex-col mb-4">
-                @if($errors->any())
-                    <label for="email" class="text-discord-error font-bold text-xs mb-2">PASSWORD - <span class="italic font-semibold">Login or password is invalid</span></label>
+                @if($errors->has('password'))
+                    <label for="email" class="text-discord-error font-bold text-xs mb-2">PASSWORD - <span class="italic font-semibold">Password is not valid or do not match</span></label>
                 @else
                     <label for="password" class="text-discord-graytext font-bold text-xs mb-2">PASSWORD </label>
                 @endif
@@ -96,8 +96,8 @@
             </div>
             {{-- Password confirmation --}}
             <div class="flex flex-col mb-4">
-                @if($errors->any())
-                    <label for="password_confirmation" class="text-discord-error font-bold text-xs mb-2">PASSWORD CONFIRMATION - <span class="italic font-semibold">Passwords do not match</span></label>
+                @if($errors->has('password'))
+                    <label for="password_confirmation" class="text-discord-error font-bold text-xs mb-2">PASSWORD CONFIRMATION - <span class="italic font-semibold">Password is not valid or do not match</span></label>
                 @else
                     <label for="password_confirmation" class="text-discord-graytext font-bold text-xs mb-2">PASSWORD CONFIRMATION </label>
                 @endif
@@ -105,7 +105,7 @@
             </div>
             {{-- Date of birth --}}
             <div class="flex flex-col mb-4">
-                @if($errors->any())
+                @if($errors->has('date_of_birth'))
                     <label for="date_of_birth" class="text-discord-error font-bold text-xs mb-2">DATE OF BIRTH - <span class="italic font-semibold">You must be 13 years or older</span></label>
                 @else
                     <label for="date_of_birth" class="text-discord-graytext font-bold text-xs mb-2">DATE OF BIRTH </label>
