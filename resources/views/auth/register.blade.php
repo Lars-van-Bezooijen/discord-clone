@@ -63,7 +63,7 @@
             <div class="flex flex-col mb-4">
                 <div class="flex items-center">
                     <input type="checkbox" name="agree" id="agree" class="w-6 h-6 bg-transparent text-discord-blue border-1 border-discord-graytext rounded-md p-2 focus:ring-0">
-                    <p class="ml-2 text-xs">I have read and agree to Discord's <a href="" class="basic-link text-xs">Terms of Service</a> and <a href="" class="basic-link text-xs">Privacy Policy</a>.</p>
+                    <p class="ml-2 text-xs">I have read and agree to Discord's <a href="https://discord.com/terms" class="basic-link text-xs">Terms of Service</a> and <a href="https://discord.com/privacy" class="basic-link text-xs">Privacy Policy</a>.</p>
                 </div>
                 
             </div>
