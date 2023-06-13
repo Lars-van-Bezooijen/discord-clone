@@ -16,11 +16,15 @@
             
             {{-- Email --}}
             <div class="flex flex-col mb-4">
-                @if($errors->has('email'))
-                    <label for="email" class="text-discord-error font-bold text-xs mb-2">EMAIL - <span class="italic font-semibold">Email is invalid</span></label>
-                @else
-                    <label for="email" class="text-discord-graytext font-bold text-xs mb-2">EMAIL </label>
-                @endif
+                <div class="group relative mb-2 w-min">
+                    <div class="group-hover:block w-max hidden bg-black p-2 px-4 font-semibold rounded-sm w-fit text-sm absolute -top-10 before:absolute before:top-full before:left-3 before:w-0 before:h-0 before:border-l-[6px] before:border-l-transparent before:border-t-[8px] before:border-t-black before:border-r-[6px] before:border-r-transparent">Must be an email test est</div>
+                    @if($errors->has('email'))
+                        <label for="email" class="text-discord-error font-bold text-xs">EMAIL - <span class="italic font-semibold">Email is invalid</span></label>
+                    @else
+                        <label for="email" class="text-discord-graytext font-bold text-xs mb-2">EMAIL </label>
+                    @endif
+                </div>
+                
                 <input type="email" name="email" id="email" class="bg-discord-backgrounddark border-none rounded-md p-2 focus:ring-0">
             </div>
             {{-- Username --}}
@@ -28,14 +32,14 @@
                 @if($errors->has('username'))
                     <label for="username" class="text-discord-error font-bold text-xs mb-2">USERNAME - <span class="italic font-semibold">Username is not valid or already taken</span></label>
                 @else
-                    <label for="email" class="text-discord-graytext font-bold text-xs mb-2">USERNAME </label>
+                    <label for="username" class="text-discord-graytext font-bold text-xs mb-2">USERNAME </label>
                 @endif
                 <input type="text" name="username" id="username" class="bg-discord-backgrounddark border-none rounded-md p-2 focus:ring-0">
             </div>
             {{-- Password --}}
             <div class="flex flex-col mb-4">
                 @if($errors->has('password'))
-                    <label for="email" class="text-discord-error font-bold text-xs mb-2">PASSWORD - <span class="italic font-semibold">Password is not valid or do not match</span></label>
+                    <label for="password" class="text-discord-error font-bold text-xs mb-2">PASSWORD - <span class="italic font-semibold">Password is not valid or do not match</span></label>
                 @else
                     <label for="password" class="text-discord-graytext font-bold text-xs mb-2">PASSWORD </label>
                 @endif
@@ -74,8 +78,8 @@
                 </div>
                 <p class="text-sm text-discord-graytext"><a href="{{ route('login') }}" class="basic-link">Already have an account?</a></p>
             </div>
-        </form>
-    </div>
+        </form> {{-- End of content --}}
+    </div> {{-- End of container --}}
 </div>
 
 {{-- Button interaction --}}
