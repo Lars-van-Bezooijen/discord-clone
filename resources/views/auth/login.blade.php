@@ -23,6 +23,7 @@
 
             {{-- Forgot password --}}
             <a href="{{ route('password.request') }}" class="basic-link inline-block mb-4">Forgot your password?</a>
+            
             {{-- Submit --}}
             <div>
                 <div class="bg-discord-blue hover:bg-discord-bluehover mb-2 rounded-md">
