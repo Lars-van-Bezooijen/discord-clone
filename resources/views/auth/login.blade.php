@@ -16,23 +16,11 @@
             @csrf
             
             {{-- Email --}}
-            <div class="flex flex-col mb-4">
-                @if($errors->any())
-                    <label for="email" class="text-discord-error font-bold text-xs mb-2">EMAIL - <span class="italic font-semibold">{{ $errors->first('email') }}</span></label>
-                @else
-                    <label for="email" class="text-discord-graytext font-bold text-xs mb-2 after:content-['*'] after:text-discord-error"">EMAIL </label>
-                @endif
-                <input type="email" name="email" id="email" class="bg-discord-backgrounddark border-none rounded-md p-2 focus:ring-0">
-            </div>
+            <x-input type="email" title="EMAIL" name="email" placeholder="" errorCheck="email" errorMessage="Email is invalid"/>
+
             {{-- Password --}}
-            <div class="flex flex-col">
-                @if($errors->any())
-                    <label for="email" class="text-discord-error font-bold text-xs mb-2">PASSWORD - <span class="italic font-semibold">{{ $errors->first('email') }}</span></label>
-                @else
-                    <label for="password" class="text-discord-graytext font-bold text-xs mb-2 after:content-['*'] after:text-discord-error">PASSWORD </label>
-                @endif
-                <input type="password" name="password" id="password" class="bg-discord-backgrounddark border-none rounded-md p-2 focus:ring-0">
-            </div>
+            <x-input type="password" title="PASSWORD" name="password" placeholder="" errorCheck="password" errorMessage="Password is invalid or do not match"/>
+
             {{-- Forgot password --}}
             <a href="{{ route('password.request') }}" class="basic-link inline-block mb-4">Forgot your password?</a>
             {{-- Submit --}}
