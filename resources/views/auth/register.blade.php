@@ -48,7 +48,7 @@
     </div> {{-- End of container --}}
 </div>
 
-{{-- Button interaction --}}
+{{-- Submit button interaction --}}
 <script>
     // Get elements
     var buttonContainer = document.getElementById('button-container');

@@ -4,15 +4,15 @@
     'name' => $name,
     'placeholder' => $placeholder ?? "",
     'errorCheck' => $errorCheck ?? false,
-    'errorMessage' => $errorMessage ?? "Unknown error"
+    'errorMessage' => $errorMessage ?? "Unknown error",
+
+
     ])
 
 <div class="flex flex-col mb-2">
     <div class="group relative mb-2 w-fit">
         {{-- Hover content --}}
-        <div class="group-hover:block w-max hidden bg-black p-2 px-4 font-semibold rounded-sm w-fit text-sm absolute -top-10 before:absolute before:top-full before:left-3 before:w-0 before:h-0 before:border-l-[6px] before:border-l-transparent before:border-t-[8px] before:border-t-black before:border-r-[6px] before:border-r-transparent">
-            <p>Must be an email</p>
-        </div> {{-- End of hover content --}}
+        <x-hover content="Must be of type email"  direction="right"/>
 
         {{-- Label --}}
         @if($errors->has($errorCheck))
