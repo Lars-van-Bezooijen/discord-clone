@@ -25,6 +25,7 @@ export default {
                     backgrounddark: '#1e1f22',
                     backgroundmedium: '#2b2d31',
                     backgroundlight: '#313338',
+                    backgrounduser: '#232428',
                     hover: '#3d3e44',
                     icon: '#dadde0',
 

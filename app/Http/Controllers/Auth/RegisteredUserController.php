@@ -39,11 +39,15 @@ class RegisteredUserController extends Controller
             'agree' => ['required', 'accepted'],
         ]);
 
+        // Get all profile pictures from pfp folder
+        $pfp = glob(public_path('images/pfp/_default*'));
+
         $user = User::create([
             'email' => $request->email,
             'username' => $request->username,
             'password' => Hash::make($request->password),
             'status_id' => 1,
+            'profile_picture' => basename($pfp[array_rand($pfp)]),
         ]);
 
         event(new Registered($user));

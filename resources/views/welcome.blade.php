@@ -4,7 +4,7 @@
 <!-- Left navigation -->
 <div id="leftNavigation" class="hidden w-auto h-full flex md:flex lg:flex">
     <!-- Left pane -->
-    <div class="w-[72px] bg-gray-800 h-full p-[10px] pt-1">
+    <div class="w-[72px] bg-discord-backgrounddark h-full p-[10px] pt-1">
         <img src="{{ asset('images/discord_logo_text.png') }}" alt="logo" class="w-full mb-2">
         <!-- DM -->
         <div class="mb-2">
@@ -37,8 +37,34 @@
     </div> 
 
     <!-- Right pane -->
-    <div class="w-[240px] h-full bg-gray-700">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic facere iste delectus consequuntur accusantium blanditiis! Ullam asperiores error dignissimos enim.</p>
+    <div class="w-[240px] h-full flex flex-col">
+        {{-- Channels --}}
+        <div class="h-full overflow-scroll bg-discord-backgroundmedium">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic facere iste delectus consequuntur accusantium blanditiis! Ullam asperiores error dignissimos enim.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic facere iste delectus consequuntur accusantium blanditiis! Ullam asperiores error dignissimos enim.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic facere iste delectus consequuntur accusantium blanditiis! Ullam asperiores error dignissimos enim.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic facere iste delectus consequuntur accusantium blanditiis! Ullam asperiores error dignissimos enim.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic facere iste delectus consequuntur accusantium blanditiis! Ullam asperiores error dignissimos enim.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic facere iste delectus consequuntur accusantium blanditiis! Ullam asperiores error dignissimos enim.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic facere iste delectus consequuntur accusantium blanditiis! Ullam asperiores error dignissimos enim.</p>
+        </div>
+
+        {{-- User --}}
+        <div class="bg-discord-backgrounduser p-2 flex items-center justify-between">
+            {{-- User info --}}
+            <div id="user-section" class="p-2 py-1 hover:bg-discord-backgroundlight rounded-md flex items-center">
+                <img src="{{ asset('images/pfp/_default_blue.png') }}" alt="logo" class="w-8 rounded-full">
+                <div class="pl-2">
+                    <p class="font-bold text-sm">HeadShopper</p>
+                    <p id="status-and-name" class="text-xs text-discord-graytext">Online</p>
+                </div>
+
+            </div>
+            {{-- Button --}}
+            <div>
+                <p class="p-1 hover:bg-discord-backgroundlight rounded-sm">T</p>
+            </div>
+        </div>
     </div>
 
 </div> <!-- End of left navigation -->
@@ -46,7 +72,7 @@
 <!-- Main page -->
 <div id="mainPage" class="overflow-hidden w-screen h-full flex">
     <!-- Main area -->
-    <div class="bg-gray-600 w-screen h-full">
+    <div class="bg-discord-backgroundlight w-screen h-full">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic facere iste delectus consequuntur accusantium blanditiis! Ullam asperiores error dignissimos enim.</p>
     </div>
     
@@ -55,7 +81,7 @@
 <!-- Right navigation -->
 <div id="rightNavigation" class="hidden w-auto h-full flex lg:flex">
    <!-- Sidebar right -->
-   <div class="w-[340px] bg-gray-700">
+   <div class="w-[340px] bg-discord-backgroundmedium">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic facere iste delectus consequuntur accusantium blanditiis! Ullam asperiores error dignissimos enim.</p>
     </div>
 </div> <!-- End of right navigation -->
@@ -63,8 +89,17 @@
 </div> <!-- End of all -->
 
 
-
-
+{{-- User-section hover --}}
+<script>
+    const userSection = document.getElementById("user-section");
+    const statusAndName = document.getElementById("status-and-name");
+    userSection.addEventListener("mouseenter", function () {
+        statusAndName.innerHTML = "headshopper";
+    });
+    userSection.addEventListener("mouseleave", function () {
+        statusAndName.innerHTML = "Online";
+    });
+</script>
 
 <!-- Swipe script -->
 <script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8"></script>
