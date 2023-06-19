@@ -16,10 +16,10 @@
             @csrf
             
             {{-- Email --}}
-            <x-input type="email" title="EMAIL" name="email" placeholder="" errorCheck="email" errorMessage="Email is invalid"/>
+            <x-input type="email" title="EMAIL" name="email" placeholder="" errorCheck="email" errorMessage="Email is invalid" hoverContent="Must be an email" hoverSide="top"/>
 
             {{-- Password --}}
-            <x-input type="password" title="PASSWORD" name="password" placeholder="" errorCheck="password" errorMessage="Password is invalid or do not match"/>
+            <x-input type="password" title="PASSWORD" name="password" placeholder="" errorCheck="password" errorMessage="Password is invalid or do not match" hoverContent="Password for the account" hoverSide="top"/>
 
             {{-- Forgot password --}}
             <a href="{{ route('password.request') }}" class="basic-link inline-block mb-4">Forgot your password?</a>

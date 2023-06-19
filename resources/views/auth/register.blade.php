@@ -15,19 +15,19 @@
             @csrf
             
             {{-- Email --}}
-            <x-input type="email" title="EMAIL" name="email" placeholder="" errorCheck="email" errorMessage="Email is invalid"/>
+            <x-input type="email" title="EMAIL" name="email" placeholder="" errorCheck="email" errorMessage="Email is invalid" hoverContent="Must be an email" hoverSide="top"/>
 
             {{-- Username --}}
-            <x-input type="text" title="USERNAME" name="username" placeholder="" errorCheck="username" errorMessage="Username is invalid or already taken"/>
+            <x-input type="text" title="USERNAME" name="username" placeholder="" errorCheck="username" errorMessage="Username is invalid or already taken" hoverContent="Username that will be displayed" hoverSide="top"/>
 
             {{-- Password --}}
-            <x-input type="password" title="PASSWORD" name="password" placeholder="" errorCheck="password" errorMessage="Password is invalid or do not match"/>
+            <x-input type="password" title="PASSWORD" name="password" placeholder="" errorCheck="password" errorMessage="Password is invalid or do not match" hoverContent="Password for account" hoverSide="top"/>
 
             {{-- Password confirmation --}}
-            <x-input type="password" title="PASSWORD CONFIRMATION" name="password_confirmation" placeholder="" errorCheck="password" errorMessage="Password is invalid or do not match"/>
+            <x-input type="password" title="PASSWORD CONFIRMATION" name="password_confirmation" placeholder="" errorCheck="password" errorMessage="Password is invalid or do not match" hoverContent="Repeat your password" hoverSide="top"/>
 
             {{-- Date of birth --}}
-            <x-input type="date" title="DATE OF BIRTH" name="date_of_birth" placeholder="" errorCheck="date_of_birth" errorMessage="You must be 13 years or older"/>
+            <x-input type="date" title="DATE OF BIRTH" name="date_of_birth" placeholder="" errorCheck="date_of_birth" errorMessage="You must be 13 years or older" hoverContent="When you were born" hoverSide="top"/>
             
             {{-- Agree checkbox --}}
             <div class="flex flex-col mb-4 mt-4">

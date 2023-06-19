@@ -5,14 +5,14 @@
     'placeholder' => $placeholder ?? "",
     'errorCheck' => $errorCheck ?? false,
     'errorMessage' => $errorMessage ?? "Unknown error",
-
-
+    'hoverContent' => $hoverContent ?? 'No hover content',
+    'hoverSide' => $hoverSide ?? 'top',
     ])
 
 <div class="flex flex-col mb-2">
     <div class="group relative mb-2 w-fit">
         {{-- Hover content --}}
-        <x-hover content="Must be of type email"  direction="right"/>
+        <x-hover content="{{ $hoverContent }}"  side="{{ $hoverSide }}"/>
 
         {{-- Label --}}
         @if($errors->has($errorCheck))
