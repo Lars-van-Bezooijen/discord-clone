@@ -9,10 +9,10 @@
      <!-- Fonts -->
      <link rel="preconnect" href="https://fonts.bunny.net">
      <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/a3a135dd83.js" crossorigin="anonymous"></script>
+    
     <!-- Vite -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>

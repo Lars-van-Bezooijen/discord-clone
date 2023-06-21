@@ -23,5 +23,11 @@
     </div>
     
     {{-- Input --}}
-    <input value="{{ old($name) }}" type="{{ $type }}" name="{{ $name }}" id="{{ $name }}" placeholder="{{ $placeholder }}" class="bg-discord-backgrounddark border-none rounded-md p-2 focus:ring-0 placeholder:text-gray-500">
+    
+    <div class="flex justify-between items-center bg-discord-backgrounddark border-none rounded-md focus:ring-0 placeholder:text-gray-500">
+        <input value="{{ old($name) }}" type="{{ $type }}" name="{{ $name }}" id="{{ $name }}" placeholder="{{ $placeholder }}" class="password bg-discord-backgrounddark w-full border-none rounded-md focus:ring-0 placeholder:text-gray-500">
+        @if($type == "password")
+            <i class="show-password fa-solid fa-eye-slash p-2 mr-2 text-discord-icon hover:cursor-pointer"></i>
+        @endif
+    </div>
 </div>
