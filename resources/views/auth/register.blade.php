@@ -1,13 +1,13 @@
 @extends('layouts.base')
 @section('content')
 
-<div class="select-none w-full h-full bg-no-repeat bg-center bg-cover flex justify-center items-center" style="background: url('{{asset('images/discord_background.jpg')}}')">
+<div class="select-none w-full h-full bg-no-repeat bg-center bg-cover flex justify-center items-center" style="background: url('{{asset('img/discord_background.jpg')}}')">
 
     {{-- Container --}}
     <div class="bg-discord-backgroundlight pt-6 px-6 sm:p-6 sm:m-6 h-full sm:h-auto sm:rounded-md w-full md:max-w-[500px]">
         {{-- Heading --}}
         <div class="text-center mb-4">
-            <img src="{{ asset('images/discord_logo_with_text.png') }}" alt="logo" class="w-32 mb-6 m-auto sm:hidden">
+            <img src="{{ asset('img/discord_logo_with_text.png') }}" alt="logo" class="w-32 mb-6 m-auto sm:hidden">
             <p class="text-xl font-bold">Create an account</p>
         </div>
         
@@ -76,30 +76,8 @@
     
 </script>
 
-{{-- Show password icon --}}
-<script>
-    var showPasswords = document.querySelectorAll('.show-password');
-
-    showPasswords.forEach(showPassword => 
-    {
-        showPassword.addEventListener('click', function() 
-        {
-            var passwordInput = this.previousElementSibling;
-            if (passwordInput.type === 'password') 
-            {
-                passwordInput.type = 'text';
-                this.classList.replace('fa-eye-slash', 'fa-eye')
-                this.classList.replace('text-discord-icon', 'text-discord-error')
-            } 
-            else 
-            {
-                passwordInput.type = 'password';
-                this.classList.replace('fa-eye', 'fa-eye-slash')
-                this.classList.replace('text-discord-error', 'text-discord-icon')
-            }
-        });
-    });
-</script>
+{{-- Show password script --}}
+<script type="text/javascript" src="{{ asset('js/show-password.js') }}"></script>
 
 @endsection
 
