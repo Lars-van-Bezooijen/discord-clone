@@ -1,7 +1,8 @@
 @extends('layouts.base')
 @section('content')
 
-<div class="select-none w-full h-full sm:bg-[url({{ asset('images/discord_background.jpg') }})] bg-no-repeat bg-center bg-cover flex justify-center items-center">
+<div class="select-none w-full h-full bg-no-repeat bg-center bg-cover flex justify-center items-center" style="background: url('{{asset('images/discord_background.jpg')}}')">
+
     {{-- Container --}}
     <div class="bg-discord-backgroundlight pt-6 px-6 sm:p-6 sm:m-6 h-full sm:h-auto sm:rounded-md w-full md:max-w-[500px]">
         {{-- Heading --}}
